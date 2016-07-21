@@ -35,6 +35,7 @@ public class NVA {
         }
     }
 
+
     public void setWeapon() {
         while(!((playerType.equalsIgnoreCase("ninja") && ((weapon.equalsIgnoreCase("blade")) || (weapon.equalsIgnoreCase("star")))) ||
                 ((playerType.equalsIgnoreCase("alien") && ((weapon.equalsIgnoreCase("claw")) || (weapon.equalsIgnoreCase("laser"))))))) {
@@ -115,8 +116,8 @@ public class NVA {
             stats.recordAttack(alienDamageReceived, ninjaDamageReceived);
 
             System.out.println(" ");
-//            System.out.println("Press [enter] to take another turn.");
-//            String turn = PlayNVA.scanner.nextLine();
+            System.out.println("Press [enter] to take another turn.");
+            String turn = PlayNVA.scanner.nextLine();
             System.out.println(" ");
         }
 
@@ -131,6 +132,8 @@ public class NVA {
             System.out.println("Everyone Died!!!");
             System.out.println(ninja.getPlayerName()+" and "+alien.getPlayerName()+" both lose.");
         }
+        System.out.println("**********************************************");
+        System.out.println("****************  Game Stats  ****************");
         System.out.println("**********************************************");
         System.out.println("Total attacks: "+stats.getTotalAttacks());
         System.out.println("Total ties: "+stats.getTies());
